@@ -21,12 +21,7 @@ describe('res', function(){
 
     describe('should throw', function() {
       var InvalidStatusError = new TypeError('Invalid status code')
-      it('if status code is a string', function(done) {
-        assert.throws(function () {
-          res.status('200')
-        }, InvalidStatusError)
-        done()
-      })
+
       it('if status code is < 100 || > 999', function(done) {
         assert.throws(function() {
           res.status(99)
@@ -39,6 +34,7 @@ describe('res', function(){
       it('if status code is not an integer', function (done) {
         var cases = [
           200.1,
+          '200.1',
           NaN,
           Infinity,
           -Infinity,
