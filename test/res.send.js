@@ -407,6 +407,8 @@ describe('res', function(){
 
       methods.forEach(function (method) {
         if (method === 'connect') return;
+        // until we can investigate support, see https://github.com/expressjs/express/issues/5615
+        if (method === 'query') return;
 
         it('should send ETag in response to ' + method.toUpperCase() + ' request', function (done) {
           var app = express();

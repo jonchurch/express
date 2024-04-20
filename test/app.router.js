@@ -37,6 +37,8 @@ describe('app.router', function(){
   describe('methods', function(){
     methods.concat('del').forEach(function(method){
       if (method === 'connect') return;
+      // until we can investigate support, see https://github.com/expressjs/express/issues/5615
+      if (method === 'query') return;
 
       it('should include ' + method.toUpperCase(), function(done){
         var app = express();
