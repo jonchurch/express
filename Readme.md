@@ -1,10 +1,10 @@
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
 
-  **Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).**
+**Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).**
 
-  **This project has a [Code of Conduct][].**
+**This project has a [Code of Conduct][].**
 
-  ## Table of contents
+## Table of contents
 
 * [Installation](#Installation)
 * [Features](#Features)
@@ -20,9 +20,9 @@
 * [License](#license)
 
 
-  [![NPM Version][npm-version-image]][npm-url]
-  [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
-  [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Install Size][npm-install-size-image]][npm-install-size-url]
+[![NPM Downloads][npm-downloads-image]][npm-downloads-url]
 
 ```js
 const express = require('express')
