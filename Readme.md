@@ -20,7 +20,7 @@
   * [TC (Technical Committee)](#Technical-Committee)
   * [Collaborators](#collaborators)
   * [Triagers](#triagers)
-* [License](#license)
+  * [License](#license)
 
 
 ### H3
@@ -36,8 +36,7 @@
   * [TC (Technical Committee)](#Technical-Committee)
   * [Collaborators](#collaborators)
   * [Triagers](#triagers)
-* [License](#license)
-
+  * [License](#license)
 
   ```js
   const express = require('express')
