@@ -14,7 +14,7 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('Set-Cookie', 'sid=; Max-Age=0; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
+      .expect('Set-Cookie', 'sid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
       .expect(200, done)
     })
   })
@@ -29,7 +29,7 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('Set-Cookie', 'sid=; Max-Age=0; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
+      .expect('Set-Cookie', 'sid=; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
       .expect(200, done)
     })
 
@@ -37,12 +37,12 @@ describe('res', function(){
       var app = express();
 
       app.use(function(req, res){
-        res.clearCookie('sid', { path: '/admin', maxAge: 900 }).end();
+        res.clearCookie('sid', { path: '/admin', maxAge: 1000 }).end();
       });
 
       request(app)
       .get('/')
-      .expect('Set-Cookie', 'sid=; Max-Age=0; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
+      .expect('Set-Cookie', 'sid=; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
       .expect(200, done)
     })
 
@@ -55,7 +55,7 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('Set-Cookie', 'sid=; Max-Age=0; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
+      .expect('Set-Cookie', 'sid=; Path=/admin; Expires=Thu, 01 Jan 1970 00:00:00 GMT')
       .expect(200, done)
     })
   })
